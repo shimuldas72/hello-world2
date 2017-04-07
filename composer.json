@@ -1,0 +1,14 @@
+{
+    "name": "shimuldas72/hello-world",
+    "authors": [
+        {
+            "name": "shimuldas72"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "HelloWorld": "src/"
+        }
+    }
+}
