@@ -22,8 +22,8 @@
     "sadovojav/yii2-inline-widgets-behavior": "dev-master"
   },
   "autoload": {
-    "psr-0": {
-      "HelloWorld": "src/"
-    }
+    "psr-4": {
+          "shimuldas72\\form\\": ""
+      }
   }
 }
