@@ -26,13 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                     <div class="row wrapper">
                       <div class="col-sm-5 m-b-xs">
-                        <select class="input-sm form-control w-sm inline v-middle">
-                          <option value="0">Bulk action</option>
-                          <option value="1">Delete selected</option>
-                          <option value="2">Bulk edit</option>
-                          <option value="3">Export</option>
-                        </select>
-                        <button class="btn btn-sm btn-default">Apply</button>                
+                                     
                       </div>
                       <div class="col-sm-4">
                       </div>
@@ -84,16 +78,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     <footer class="panel-footer">
                       <div class="row">
                         <div class="col-sm-4 hidden-xs">
-                          <select class="input-sm form-control w-sm inline v-middle">
-                            <option value="0">Bulk action</option>
-                            <option value="1">Delete selected</option>
-                            <option value="2">Bulk edit</option>
-                            <option value="3">Export</option>
-                          </select>
-                          <button class="btn btn-sm btn-default">Apply</button>                  
+                                            
                         </div>
                         <div class="col-sm-4 text-center">
-                          <small class="text-muted inline m-t-sm m-b-sm"><?= \Yii::$app->GlobalClass->getPaginationSummary($dataProvider); ?></small>
+                          <small class="text-muted inline m-t-sm m-b-sm"></small>
                         </div>
                         <div class="col-sm-4 text-right text-center-xs">                
                             <?php      

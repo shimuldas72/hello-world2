@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 	    $form = ActiveForm::begin([
 	                    'id' => 'field-form',
 	                    'options'=>['class'=>'form-horizontal field-form'],
-	                    'action' => ['/f/forms/save_field'],
+	                    'action' => ['forms/save_field'],
 	                    'fieldConfig' => [
 	                        'template' => "{label}\n<div class=\"col-sm-10\">{input}\n{hint}\n{error}</div>",
 	                    ],
@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 	    $form = ActiveForm::begin([
 	                    'id' => 'field-form_update',
 	                    'options'=>['class'=>'form-horizontal field-form'],
-	                    'action' => ['/f/forms/save_field','id'=>$field_model->id],
+	                    'action' => ['forms/save_field','id'=>$field_model->id],
 	                    'fieldConfig' => [
 	                        'template' => "{label}\n<div class=\"col-sm-10\">{input}\n{hint}\n{error}</div>",
 	                    ],

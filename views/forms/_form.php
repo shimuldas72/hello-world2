@@ -15,19 +15,16 @@ $fields = $model->fields;
 
             <ul class="nav nav-tabs page_tabs" role="tablist">
                 <li role="presentation" class="active">
-                    <a href="#general" aria-controls="general" role="tab" data-toggle="tab">General Info&nbsp; 
-                    <span class="badge bg-dark" data-toggle="tooltip" title="General Info"><i class="fa fa-info"></i></span></a>
+                    <a href="#general" aria-controls="general" role="tab" data-toggle="tab">General Info</a>
                 </li>
                 <li role="presentation">
-                    <a href="#sending_options" aria-controls="sending_options" role="tab" data-toggle="tab">Sending options&nbsp; 
-                    <span class="badge bg-dark" data-toggle="tooltip" title="Sending options"><i class="fa fa-info"></i></span></a>
+                    <a href="#sending_options" aria-controls="sending_options" role="tab" data-toggle="tab">Sending options</a>
                 </li>
                 <?php
                     if(!$model->isNewRecord){
                 ?>
                 <li role="presentation">
-                    <a href="#Fields" aria-controls="Fields" role="tab" data-toggle="tab">Fields&nbsp; 
-                    <span class="badge bg-dark" data-toggle="tooltip" title="Fields"><i class="fa fa-info"></i></span></a>
+                    <a href="#Fields" aria-controls="Fields" role="tab" data-toggle="tab">Fields</a>
                 </li>
                 <?php
                     }
@@ -139,8 +136,8 @@ $fields = $model->fields;
                                                     <td><?= $value->validators; ?></td>
                                                     <td><input type="text" name="sort_order" value="<?= $value->sort_order; ?>" class="sort_order_field"></td>
                                                     <td>
-                                                        <a data-pjax="false" title="update" href="<?= Url::toRoute(['/f/forms/get_update_data','id'=>$value->id]); ?>" class="update_field_btn"><i class="fa fa-pencil fa-fw m-r-xs"></i></a>
-                                                        <a data-pjax="false" title="delete" href="<?= Url::toRoute(['/f/forms/delete_field','id'=>$value->id]); ?>" class="delete_field_btn"><i class="fa fa-remove fa-fw m-r-xs text-danger"></i></a>
+                                                        <a data-pjax="false" title="update" href="<?= Url::toRoute(['forms/get_update_data','id'=>$value->id]); ?>" class="update_field_btn"><i class="glyphicon glyphicon-pencil"></i></a>
+                                                        <a data-pjax="false" title="delete" href="<?= Url::toRoute(['forms/delete_field','id'=>$value->id]); ?>" class="delete_field_btn"><i class="glyphicon glyphicon-trash text-danger"></i></a>
                                                     </td>
                                                 </tr>
                                     <?php
@@ -242,7 +239,7 @@ $fields = $model->fields;
             $.ajax({
                 type : 'POST',
                 dataType : 'json',
-                url : '".Url::toRoute(['/f/forms/save_order_all','id'=>$model->id])."',
+                url : '".Url::toRoute(['forms/save_order_all','id'=>$model->id])."',
                 data: {serial_array:serial_array,dbtable:dbtable},
                 beforeSend : function( request ){
                     
@@ -342,7 +339,6 @@ $fields = $model->fields;
                             form[0].reset();
 
                             setTimeout(function(){
-                                toastr.success(data.msg,'');
                                 $.pjax.reload({container:'#list_of_fields'});
                             },200);
                         }else{

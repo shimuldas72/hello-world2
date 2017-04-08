@@ -37,9 +37,6 @@ class FormsController extends Controller
 
     public function actionIndex()
     {
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_list')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
 
         $searchModel = new FormListSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -53,9 +50,7 @@ class FormsController extends Controller
 
     public function actionView($id)
     {
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_view')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
+        
 
         return $this->render('view', [
             'model' => $this->findModel($id),
@@ -65,9 +60,6 @@ class FormsController extends Controller
 
     public function actionCreate()
     {
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_create')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
 
         $model = new FormList();
         $field_model = new FormFields();
@@ -85,9 +77,6 @@ class FormsController extends Controller
 
     public function actionUpdate($id)
     {
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_update')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
 
         $model = $this->findModel($id);
         $field_model = new FormFields();
@@ -103,9 +92,7 @@ class FormsController extends Controller
     }
 
     public function actionSave_field($id=''){
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_update')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
+        
 
         \Yii::$app->response->format = Response::FORMAT_JSON;
         $response['result'] = 'error';
@@ -131,10 +118,7 @@ class FormsController extends Controller
     }
 
     public function actionGet_update_data($id){
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_update')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
-
+        
         \Yii::$app->response->format = Response::FORMAT_JSON;
         $response['result'] = 'error';
 
@@ -150,9 +134,7 @@ class FormsController extends Controller
     }
 
     public function actionDelete_field($id){
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_update')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
+        
 
         \Yii::$app->response->format = Response::FORMAT_JSON;
         $response['result'] = 'error';
@@ -172,9 +154,7 @@ class FormsController extends Controller
 
 
     public function actionCopy($id){
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_copy')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
+        
 
         $model = FormList::find()->where(['id'=>$id])->one();
         $last_entry = FormList::find()->orderBy('id desc')->one();
@@ -205,9 +185,6 @@ class FormsController extends Controller
 
     public function actionDelete($id)
     {
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_delete')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
 
         $model = $this->findModel($id);
 
@@ -255,9 +232,7 @@ class FormsController extends Controller
 
 
     public function actionSubmitted_forms($id=''){
-        if(\Yii::$app->user->can('form_module') || \Yii::$app->user->can('form_submitted')){}else{
-            throw new ForbiddenHttpException("You are not authorized to perform this action.", 403);
-        }
+        
 
         $searchModel = new FormSubmittedSearch();
         if($id!=''){
