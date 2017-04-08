@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\forms;
+namespace shimuldas72\forms;
 
 class Forms extends \yii\base\Module
 {

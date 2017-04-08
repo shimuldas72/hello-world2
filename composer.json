@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-          "shimuldas72\\form\\": ""
+          "shimuldas72\\forms\\": ""
       }
   }
 }
