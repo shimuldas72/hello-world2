@@ -4,7 +4,7 @@ namespace shimuldas72\forms;
 
 class Forms extends \yii\base\Module
 {
-   public $controllerNamespace = 'backend\modules\forms\controllers';
+   public $controllerNamespace = 'shimuldas72\forms\controllers';
 
    public function init()
    {
