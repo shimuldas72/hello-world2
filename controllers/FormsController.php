@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\modules\forms\controllers;
+namespace shimuldas72\forms\controllers;
 
 use Yii;
 use yii\helpers\Html;
-use backend\modules\forms\models\FormList;
-use backend\modules\forms\models\FormListSearch;
-use backend\modules\forms\models\FormFields;
-use backend\modules\forms\models\FormSubmittedSearch;
-use backend\modules\forms\models\FormSubmitted;
+use shimuldas72\forms\models\FormList;
+use shimuldas72\forms\models\FormListSearch;
+use shimuldas72\forms\models\FormFields;
+use shimuldas72\forms\models\FormSubmittedSearch;
+use shimuldas72\forms\models\FormSubmitted;
 
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

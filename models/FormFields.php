@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\modules\forms\models;
+namespace shimuldas72\forms\models;
 
 use Yii;
 

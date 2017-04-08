@@ -1,11 +1,11 @@
 <?php
 
-namespace backend\modules\forms\models;
+namespace shimuldas72\forms\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\modules\forms\models\FormList;
+use shimuldas72\forms\models\FormList;
 
 /**
  * FormListSearch represents the model behind the search form about `backend\modules\forms\models\FormList`.
